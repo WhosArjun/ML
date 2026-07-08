@@ -1,0 +1,15 @@
+Height of people as x axis, and the weight of person on the y axis
+Imagine an example of only overweight and skinny people, not normal weight people
+Now we want a model for whether a random point is skinny or overweight
+The k is now looking at the neighbors to determine its factor
+
+K is a certain number
+It takes K amount of neighbors to compare the unkown point
+if K is is one it looks at the nearest point, 2 second nearest point, then on and on
+
+Which ever class has most of the points out of the K epochs, is the class the point is going to be classified as
+The amount of classes should not be divisible by k, because if you have a point that is equdistant from k points.
+Then you wouldn't really have an answer for the K classification
+
+K shouldn't be one either because then it only looks at one, and not the rest of the classes for their distance
+
