@@ -1,0 +1,48 @@
+If we have a bunch of students and each of them have an exam
+and each of these students invested a certain amount of time into studying
+for the exam.
+
+Study Time : 0h - inf(h)
+Exam Score : Result of the test (0,100)
+
+We want to plot this onto a 2d coordinat system
+Y axis exam score, and the x axis is the study time
+
+People who don't study a lot get the worst scores, people who study a little more
+get better scores, and people who study more get really good scores.
+
+What a Linear Regression tries to do is it tries to find a line that best fits all of these points.
+Some care about outliers and others don't care about outliers.
+Minimizing the error is what matters. The error is the distance from the prediction to the actual line.
+
+We want to find a function that minimizes the error.
+
+y = mx+b -> Linear Regression Equation
+
+E = (1/n) * (the sum of i=0 up until n)(yi-(mx+b))^2
+Mean Squared Error Function 
+
+For each point until the n amount of points to the last point, is we get the y value of the actual point
+and we substract the position of the function y value. Then we get the difference of them and square that difference.
+    We then take all of these differences, square difference, divide by n.
+
+We want to find the line that gives us the lowest possible E, we can only manipulate m and b.
+We can take the partial derivitive in respect to m and respect to b.
+    partial derivitive : Measures the rate of change of a multivariable function (like a 3d surface) in one specific direction.
+    Imaging you are standing on a hilly landscape described by the function z = f(x,y). If you want to know how steep the hill is strictly
+    walking forward (in the x direction), you use the partial derivative with respect to x, denoted as af/ax. To calculate it, you freeze the y coordinate,
+    effectively turning the 3D surface into a simple 2d curve, and find its standard slope.
+
+    Given the function f(x,y) = x^2 + y^3
+    To find the partial derivative with respect to x(af/ax), treat y as a constant.
+    The derivative of x^2 is 2x, and the derivative of the constant y^3 = 0. Therefore af/ax = 2x.
+
+E = (1/n) * (the sum of i=0 up until n)(yi-(mx+b))^2
+2E/2m = 1/n * i=0 to n (2*(yi-(m*xi+b))) 
+    = -2/n * i=0 to n * xi(yi-(m*xi+b)) - in respect to m 
+
+2E/2b = -2/n * sum from i to n (yi-(m*xi+b))
+
+With each iteration take the new m, and assign to it the current m minus the learning rate times the direction of the steepest descent.
+m = m - L * 2E/2m
+b = b - L * 2E/2B 
