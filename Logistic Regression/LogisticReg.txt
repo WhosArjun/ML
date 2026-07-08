@@ -1,1 +1,42 @@
 Logistic Regression
+This logistic regression can check for probability 
+We can simulate this by doing a normal linear regression and then forcing the values to be between 0 and 1
+through an additional function.
+
+x^(i)   m instances
+Vector 
+[20     n feature (how long someone studied, last test score, hours slept)
+ 95]    
+
+ Theta^t * x^i = z^instances
+ n parameters   n features 
+
+ A sigmoid function is a function that forces the value to be between zero and one
+ Sigmoid Function : sigma(z) = 1/(1+e^-z)
+                    Any value z
+h(theta)^i(x^i) = sigma(z^i)
+
+m instances where i is the ith instance out of the instances, j is the amount of features
+Base linear combination, take random parameters. Take our input features.
+Calculate the product (vector), get the logit Z for the instance i.
+Take this and feed it through the sigmoid function, and get your h(x)
+
+If the answer is 1 or 0, get it as close to the answer as possible
+Sigma(theta) = pi 
+
+(1) Linear Foundation (z) : 
+Before applying the non linear logistic function, the model first computes a standard linear regression output. 
+For a feature vector x = [x1,x2,....xn]
+    z = w1x1 + w2x2 + ... + wnxn + b = w^tx + b 
+    w = weight
+    x = input features
+    b = bias (intercept)
+    While z cant ake any value from -ing to +ing classification tasks require probability bounded between 0 and 1
+
+
+(2) The sigmoid squeeze
+To constrain the output, the linear result z is piped into the logistic function
+y = a(z) = 1/1+e^-z = 1/1+e^-(Wtx+b)
+if z goes to -inf the function is closer to 0
+if z goes to inf the function is closer to 1 
+if z = 0 the function goes to 0.5
