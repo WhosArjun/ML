@@ -1,0 +1,15 @@
+Imagine a coordinate system with Feature 1 on the x axis and Feature 2 on the y axis
+With K neighbor classification we just calculated and classified by the nearest points
+With support vector machines we train a mathematic function that splits the data
+To find this line we use support vectors
+
+Support Vector : A parallel line from the base line
+Margin is the space where there are no points, and you want the margin to be 50:50 ration
+We want to train a model that has the largest margin
+
+Kernel Concept (Function) : Adds an additional dimension to the data
+Feature 1 and 2 is 2 dimensional data
+Kernels use the data we already have, we use both features to create a new feature
+We combine F1 and F2 for the kernel values
+
+Soft Margin is the allowance for misclassification, allowing some errors we can make the model more accurate in the long term
