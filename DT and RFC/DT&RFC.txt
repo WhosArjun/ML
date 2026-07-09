@@ -1,0 +1,21 @@
+Mark has a descision of going out to nature or not? We have to predict this descision.
+1 Y
+2 Y             Is it sunny, windy, rainy, or alone?
+3 N                     y   n           n       y 
+4 Y             Parameters he can base his descision off of 
+5 N
+6 N
+7 N         
+8 Y
+
+            Root 
+        Not sun     Sun 
+    Rain            Rain 
+Windy
+
+We define a root node, we choose a random feature and then split up different possibilities into different branches
+Then we get either a yes or a no.    
+
+Random Forest Classifcation : The order of features chosen might lead to huge difference in the outcome. You create mutliple descision trees and train all of them
+onto the same data. In the end you get a new test example, and feed the test example into all of the descision trees.
+The collective/majority of the votes wins and that has the most probability of being a yes or a no. 
